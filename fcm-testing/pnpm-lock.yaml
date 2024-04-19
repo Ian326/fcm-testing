@@ -52,6 +52,9 @@ devDependencies:
   vite:
     specifier: ^5.2.0
     version: 5.2.9(@types/node@20.12.7)
+  vite-require:
+    specifier: ^0.2.3
+    version: 0.2.3
 
 packages:
 
@@ -1648,6 +1651,10 @@ packages:
     resolution: {integrity: sha512-MSjYzcWNOA0ewAHpz0MxpYFvwg6yjy1NG3xteoqz644VCo/RPgnr1/GGt+ic3iJTzQ8Eu3TdM14SawnVUmGE6A==}
     dev: false
 
+  /es-module-lexer@1.5.0:
+    resolution: {integrity: sha512-pqrTKmwEIgafsYZAGw9kszYzmagcE/n4dbgwGWLEXg7J4QFJVQRBld8j3Q3GNez79jzxZshq0bcT962QHOghjw==}
+    dev: true
+
   /esbuild@0.20.2:
     resolution: {integrity: sha512-WdOOppmUNU+IbZ0PaDiTst80zjnrOkyJNHoKupIcVyU8Lvla3Ugx94VzkQ32Ijqd7UhHJy75gNWDMUekcrSJ6g==}
     engines: {node: '>=12'}
@@ -2147,6 +2154,12 @@ packages:
       yallist: 4.0.0
     dev: true
 
+  /magic-string@0.30.10:
+    resolution: {integrity: sha512-iIRwTIf0QKV3UAnYK4PU8uiEc4SRh5jX0mwpIwETPpHdhVM4f53RSwS/vXvN1JhGX+Cs7B8qIq3d6AH49O5fAQ==}
+    dependencies:
+      '@jridgewell/sourcemap-codec': 1.4.15
+    dev: true
+
   /merge2@1.4.1:
     resolution: {integrity: sha512-8q7VEgMJW4J8tcfVPy8g09NcQwZdbwFEqhe/WZkoIzjn/3TGDwtOCYtXGxA3O8tPzpczCCDgv+P2P5y00ZJOOg==}
     engines: {node: '>= 8'}
@@ -2528,6 +2541,22 @@ packages:
     resolution: {integrity: sha512-7rKUyy33Q1yc98pQ1DAmLtwX109F7TIfWlW1Ydo8Wl1ii1SeHieeh0HHfPeL2fMXK6z0s8ecKs9frCuLJvndBg==}
     dependencies:
       punycode: 2.3.1
+    dev: true
+
+  /vite-plugin-dynamic-import@1.5.0:
+    resolution: {integrity: sha512-Qp85c+AVJmLa8MLni74U4BDiWpUeFNx7NJqbGZyR2XJOU7mgW0cb7nwlAMucFyM4arEd92Nfxp4j44xPi6Fu7g==}
+    dependencies:
+      acorn: 8.11.3
+      es-module-lexer: 1.5.0
+      fast-glob: 3.3.2
+      magic-string: 0.30.10
+    dev: true
+
+  /vite-require@0.2.3:
+    resolution: {integrity: sha512-Lpeg5mxXiLAVrylKK9FMF8d6yxLBm6YtHXmtWpJSDSWBdl12tBsMGHOBC/fsLzATj+Zp9FHjqwzE1JayOPi9dQ==}
+    dependencies:
+      fast-glob: 3.3.2
+      vite-plugin-dynamic-import: 1.5.0
     dev: true
 
   /vite@5.2.9(@types/node@20.12.7):
